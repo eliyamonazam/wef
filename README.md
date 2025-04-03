@@ -17,7 +17,7 @@ A terminal-based Sudoku game implemented in C++. It supports multiple features l
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/nolimiya/wef.git
+    git clone https://github.com/nolimiya/sudoku-game.git
     cd sudoku-game
     ```
 
