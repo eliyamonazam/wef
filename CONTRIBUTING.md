@@ -6,7 +6,7 @@ We welcome contributions to the Sudoku game project! To get started, please foll
 If you encounter a bug, please file an issue using the "Issues" tab and provide the following information:
 - A description of the bug
 - Steps to reproduce it
-- Your system specifications (OS, compiler, etc.)
+- Your system specifications (OS, compiler, etc.) 
 
 ## Submitting Code
 If you'd like to contribute code, follow these guidelines:
