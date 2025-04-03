@@ -4,7 +4,7 @@ A terminal-based Sudoku game implemented in C++. It supports multiple features l
 
 ## Features
 
-- **Sudoku Grid**: 9x9 grid where you can fill numbers from 1 to 9.
+- **Sudoku Grid**: 9x9 grid where you can fill numbers from 1 to 9. 
 - **Difficulty Levels**: Choose from 3 levels (Easy, Medium, Hard).
 - **Undo Functionality**: Undo the last move made during gameplay.
 - **Leaderboard**: Tracks high scores with player name, score, and time.
