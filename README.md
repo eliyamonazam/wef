@@ -1,86 +1,79 @@
-# C++ Project  
+# Sudoku Game (C++)
 
-## Overview  
-This project is developed in C++ and is designed to [briefly describe the project's purpose, such as solving a specific problem, implementing an algorithm, or simulating a system]. The project follows best coding practices and is structured for maintainability and scalability.  
+A terminal-based Sudoku game implemented in C++. It supports multiple features like game saving/loading, leaderboard tracking, undo functionality, and various difficulty levels.
 
-## Features  
-- **Efficient implementation:** The code is optimized for performance and follows standard C++ best practices.  
-- **Modular structure:** The project is divided into multiple files to ensure better code organization and reusability.  
-- **Cross-platform compatibility:** The project can be compiled and executed on Windows, Linux, and macOS.  
-- **[Additional feature if applicable]**  
+## Features
 
-## Prerequisites  
-Before compiling and running this project, ensure that you have the following dependencies installed on your system:  
+- **Sudoku Grid**: 9x9 grid where you can fill numbers from 1 to 9.
+- **Difficulty Levels**: Choose from 3 levels (Easy, Medium, Hard).
+- **Undo Functionality**: Undo the last move made during gameplay.
+- **Leaderboard**: Tracks high scores with player name, score, and time.
+- **Game Saving/Loading**: Save and load the current game state.
+- **Timer**: Each game has a time limit based on difficulty.
+- **Mistakes Tracking**: Up to 3 mistakes allowed before the game ends.
+- **Pause Menu**: Pause the game and resume or save progress.
 
-- **C++ Compiler:** A modern C++ compiler such as `g++` (GCC) or `Clang`.  
-- **Build Tools:** `Make` or `CMake` (if a Makefile is included).  
-- **Operating System:** Compatible with Windows, Linux, and macOS.  
-- **Additional Libraries:** If the project relies on external libraries, ensure they are installed.  
+## Installation
 
-## Installation and Compilation  
+1. Clone this repository:
+    ```bash
+    git clone https://github.com/nolimiya/wef.git
+    cd sudoku-game
+    ```
 
-### Step 1: Clone the Repository  
-If the project is hosted in a version control system such as GitHub, clone it using:  
+2. Compile the project using a C++ compiler (e.g., g++):
+    ```bash
+    g++ -o sudoku_game sudoku_game.cpp
+    ```
 
-```sh
-git clone https://github.com/your-repository/project-name.git
-cd project-name
-```
+3. Run the game:
+    ```bash
+    ./sudoku_game
+    ```
 
-### Step 2: Compile the Code  
-Use the following command to compile the project manually:  
+## Usage
 
-```sh
-g++ -o main main.cpp utils.cpp
-```
+When the game starts, you will be prompted with several options:
 
-Or, if a `Makefile` is available, simply run:  
+1. **New Game**: Start a fresh game.
+2. **Load Game**: Load a previously saved game.
+3. **Leaderboard**: View the top 10 players based on score and time.
+4. **Exit**: Quit the game.
 
-```sh
-make
-```
+During the game, use the following controls:
 
-### Step 3: Run the Program  
-After successful compilation, execute the program:  
+- **Arrow Keys**: Move the cursor around the grid.
+- **Numbers (1-9)**: Input a number into the selected cell.
+- **U**: Undo the last move.
+- **S**: Save the current game.
+- **Q**: Quit the game.
+- **ESC**: Pause the game and open the pause menu.
 
-```sh
-./main
-```
+### Timer
 
-## Example Usage  
+- Each level has a different time limit:
+  - Easy: 5 minutes
+  - Medium: 3 minutes
+  - Hard: 2 minutes
+- If the timer runs out, the game is over.
 
-### Sample Input  
-```
-[Provide a sample input that the program expects]
-```
+### Leaderboard
 
-### Expected Output  
-```
-[Provide the expected output of the program based on the input]
-```
+The leaderboard is updated at the end of each game and is saved in a file named `leaderboard.txt`. It stores the player's name, score, and time.
 
-## Project Structure  
-The project follows a well-organized structure to ensure maintainability and ease of development. The directory layout is as follows:  
+### Save and Load Game
 
-```
-📂 Project Directory  
- ├── 💜 main.cpp       # Main entry point of the program  
- ├── 💜 utils.cpp      # Utility functions implementation  
- ├── 💜 utils.h        # Header file for utility functions  
- ├── 💜 README.md      # Documentation of the project  
- ├── 💜 Makefile       # Build automation script  
- ├── 📂 assets         # (If applicable) Resources used by the program  
- ├── 📂 tests          # Unit tests for the project  
-```
+You can save your game progress at any time. To load a saved game, select the "Load Game" option from the main menu. The game will restore the previous state, including the board, timer, and player information.
 
-## Contributing  
-Contributions to this project are welcome. If you find a bug or have an idea for improvement, feel free to submit an issue or a pull request.  
+## Game Logic
 
-### Contribution Guidelines  
-1. Fork the repository.  
-2. Create a new branch for your feature or bug fix.  
-3. Commit your changes with a clear message.  
-4. Push your branch to GitHub and create a pull request.  
+The game generates a random Sudoku puzzle based on the difficulty level chosen. It ensures that the puzzle has a unique solution and is solvable. Players fill in the grid while making sure the numbers do not violate Sudoku rules.
 
-## Author  
-Developed by **[iliya monazam]**. If you have any questions, feel free to reach out at [eliyamonazam84@gmail.com].  
+The game ends when:
+- The player completes the puzzle correctly.
+- The player runs out of time.
+- The player makes 3 mistakes.
+
+## Acknowledgements
+
+- [Sudoku Game Algorithm](https://en.wikipedia.org/wiki/Sudoku_solving_algorithms) - used as a reference for Sudoku puzzle generation.
