@@ -4,7 +4,7 @@
 sudo apt-get update
 
 # Install necessary dependencies
-sudo apt-get install g++ make
+sudo apt-get install g++ make 
 
 # Clone the repository (if not already cloned)
 git clone https://github.com/nolimiya/sudoku-game.git
