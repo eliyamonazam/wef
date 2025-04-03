@@ -7,7 +7,7 @@ sudo apt-get update
 sudo apt-get install g++ make 
 
 # Clone the repository (if not already cloned)
-git clone https://github.com/nolimiya/sudoku-game.git
+git clone https://github.com/eliyamonazam/sudoku-game.git
 cd sudoku-game
 
 # Compile the code
